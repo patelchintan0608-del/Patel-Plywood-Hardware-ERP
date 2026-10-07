@@ -189,10 +189,17 @@ html, body {
   .page-actions button,
   .page-actions .btn,
   .emp-header-actions button,
-  .emp-header-actions .btn,
-  .ref-export-btn {
+  .emp-header-actions .btn {
     width: 100% !important;
     justify-content: center !important;
+  }
+
+  .ref-export-btn {
+    width: auto !important;
+    padding: 0.35rem 0.85rem !important;
+    font-size: 0.78rem !important;
+    justify-content: center !important;
+    align-self: flex-start !important;
   }
 
   /* Dashboard Stat Cards on Mobile: 2 Cards Per Row */

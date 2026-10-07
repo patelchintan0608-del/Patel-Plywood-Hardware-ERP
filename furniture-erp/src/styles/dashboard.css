@@ -1007,7 +1007,8 @@
 @media (max-width: 640px) {
   .ref-stats-grid,
   .ref-stats-grid-6 {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
   }
 }
 
@@ -1025,6 +1026,7 @@
   height: 100%;
   min-width: 0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .ref-stat-card:hover {
@@ -1143,6 +1145,9 @@
   color: #94a3b8;
   font-weight: 500;
   margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Middle Section: Sales Overview & Stock Status Donut */
@@ -1763,13 +1768,17 @@
   }
 
   .ref-export-btn {
-    width: 100%;
+    width: auto;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.78rem;
     justify-content: center;
+    flex-shrink: 0;
   }
 
-  .ref-stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.85rem;
+  .ref-stats-grid,
+  .ref-stats-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
   }
 
   .ref-donut-section {
@@ -1788,8 +1797,10 @@
 }
 
 @media (max-width: 480px) {
-  .ref-stats-grid {
-    grid-template-columns: 1fr;
+  .ref-stats-grid,
+  .ref-stats-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
   }
 
   .ref-user-info {
