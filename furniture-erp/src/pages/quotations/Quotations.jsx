@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DataTable from '../../components/DataTable';
-import StatusBadge from '../../Components/StatusBadge';
-import Modal from '../../Components/Modal';
+import StatusBadge from '../../components/StatusBadge';
+import Modal from '../../components/Modal';
 import StatCard from '../../components/StatCard';
 import { api } from '../../services/api';
 import { useAuth } from '../../context/AuthContext';

@@ -4,7 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import { NotificationProvider } from './context/NotificationContext';
 import ERPLayout from './layouts/ERPLayout';
 import ProtectedRoute from './routes/ProtectedRoute';
-import PermissionGuard from './Components/PermissionGuard';
+import PermissionGuard from './components/PermissionGuard';
 
 import AdminLogin from './pages/auth/AdminLogin';
 import Register from './pages/auth/Register';

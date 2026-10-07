@@ -25,8 +25,8 @@ import {
   Sparkles
 } from 'lucide-react';
 import { api } from '../../services/api';
-import Modal from '../../Components/Modal';
-import DataTable from '../../Components/DataTable';
+import Modal from '../../components/Modal';
+import DataTable from '../../components/DataTable';
 import '../../styles/leads.css';
 import '../../styles/inquiries.css';
 

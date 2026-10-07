@@ -17,7 +17,7 @@ import {
   Package
 } from 'lucide-react';
 import { api } from '../../services/api';
-import DataTable from '../../Components/DataTable';
+import DataTable from '../../components/DataTable';
 import '../../styles/leads.css';
 import '../../styles/inquiries.css';
 

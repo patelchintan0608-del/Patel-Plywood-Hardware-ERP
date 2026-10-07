@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { api } from '../services/api';
 import { getCurrentUser } from '../services/authService';
 import { useNotifications } from '../context/NotificationContext';
-import NotificationPopover from '../Components/NotificationPopover';
+import NotificationPopover from '../components/NotificationPopover';
 import StatusBadge from '../components/StatusBadge';
 import {
   Search,

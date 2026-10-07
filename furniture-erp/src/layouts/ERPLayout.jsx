@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import Sidebar from '../Components/Sidebar';
-import Topbar from '../Components/Topbar';
-import MobileBottomNav from '../Components/MobileBottomNav';
+import Sidebar from '../components/Sidebar';
+import Topbar from '../components/Topbar';
+import MobileBottomNav from '../components/MobileBottomNav';
 import '../styles/layout.css';
 import '../styles/responsive.css';
 

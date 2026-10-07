@@ -20,7 +20,7 @@ import {
   Award
 } from 'lucide-react';
 import { api } from '../../services/api';
-import Modal from '../../Components/Modal';
+import Modal from '../../components/Modal';
 import '../../styles/leads.css';
 import '../../styles/inquiries.css';
 
