@@ -1,0 +1,29 @@
+.orders-pipeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pipeline-card {
+  background: white;
+  padding: 1rem 1.25rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--slate-200);
+  border-left: 4px solid var(--primary-500);
+  display: flex;
+  flex-direction: column;
+}
+
+.pipeline-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--slate-900);
+}
+
+.pipeline-label {
+  font-size: 0.8rem;
+  color: var(--slate-500);
+  font-weight: 600;
+  text-transform: uppercase;
+}

@@ -1,0 +1,11 @@
+/* Furniture ERP Main CSS Entry Point */
+
+@import './styles/index.css';
+@import './styles/layout.css';
+@import './styles/sidebar.css';
+@import './styles/topbar.css';
+@import './styles/dashboard.css';
+@import './styles/customers.css';
+@import './styles/quotations.css';
+@import './styles/bottomNav.css';
+@import './styles/responsive.css';

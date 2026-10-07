@@ -1,0 +1,811 @@
+/* =========================================================
+   CUSTOMER TABLE WRAPPER & TABLE STYLING
+========================================================= */
+
+.customer-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  border-top: 1px solid #e5e9ef;
+
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+/* =========================================================
+   CUSTOMER TABLE
+========================================================= */
+
+.customer-table {
+  width: 100%;
+  min-width: 1280px;
+
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  font-size: 13px;
+  color: #253047;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   FIXED COLUMN WIDTHS
+========================================================= */
+
+.customer-table .col-id {
+  width: 110px;
+}
+
+.customer-table .col-company {
+  width: 200px;
+}
+
+.customer-table .col-contact {
+  width: 220px;
+}
+
+.customer-table .col-location {
+  width: 140px;
+}
+
+.customer-table .col-date {
+  width: 120px;
+}
+
+.customer-table .col-credit {
+  width: 150px;
+}
+
+.customer-table .col-status {
+  width: 170px;
+}
+
+.customer-table .col-action {
+  width: 170px;
+}
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.customer-table thead {
+  background: #f8fafc;
+}
+
+.customer-table th {
+  height: 38px;
+
+  padding: 0 8px;
+
+  text-align: left;
+  vertical-align: middle;
+
+  white-space: nowrap;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.35px;
+
+  color: #526078;
+
+  border-bottom: 1px solid #dfe5ed;
+}
+
+.customer-table th.th-action {
+  text-align: center;
+}
+
+/* =========================================================
+   TABLE BODY ROW
+========================================================= */
+
+.customer-table tbody tr {
+  height: 50px;
+
+  transition: background-color 0.15s ease;
+}
+
+.customer-table tbody tr:hover {
+  background: #fafcff;
+}
+
+/* =========================================================
+   TABLE CELL
+========================================================= */
+
+.customer-table td {
+  padding: 4px 8px;
+
+  vertical-align: middle;
+
+  border-bottom: 1px solid #edf0f4;
+
+  line-height: 1.2;
+
+  overflow: hidden;
+}
+
+.customer-table td.td-action {
+  text-align: center;
+}
+
+/* =========================================================
+   CUSTOMER ID
+========================================================= */
+
+.customer-table .customer-id {
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #95501f;
+
+  white-space: nowrap;
+}
+
+.customer-table .customer-gst {
+  margin-top: 3px;
+
+  font-size: 10px;
+  color: #94a3b8;
+
+  font-family: monospace;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   COMPANY / BUSINESS
+========================================================= */
+
+.customer-table .company-name {
+  max-width: 100%;
+
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  color: #0f172a;
+
+  white-space: normal;
+
+  overflow-wrap: anywhere;
+
+  cursor: pointer;
+}
+
+.customer-table .company-name:hover {
+  color: #b76528;
+}
+
+.customer-table .customer-type {
+  display: inline-block;
+
+  max-width: 100%;
+
+  margin-top: 4px;
+  padding: 2px 6px;
+
+  background: #f0f3f7;
+
+  color: #46546a;
+
+  border-radius: 4px;
+
+  font-size: 9px;
+
+  line-height: 1.25;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  vertical-align: middle;
+}
+
+/* =========================================================
+   CUSTOMER CONTACT
+========================================================= */
+
+.customer-table .contact-name {
+  margin: 0 0 3px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  color: #273248;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.customer-table .contact-line {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 2px;
+
+  color: #738198;
+
+  font-size: 11px;
+
+  line-height: 20px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.customer-table .contact-line svg {
+  flex: 0 0 auto;
+
+  width: 13px;
+  height: 13px;
+
+  color: #b76528;
+}
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.customer-table .location-main {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 20px;
+
+  color: #273248;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.customer-table .location-main svg {
+  flex: 0 0 auto;
+
+  width: 13px;
+  height: 13px;
+
+  color: #b76528;
+}
+
+.customer-table .location-state {
+  margin-top: 1px;
+  margin-left: 18px;
+
+  color: #91a0b5;
+
+  font-size: 11px;
+
+  line-height: 18px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   CREATED DATE
+========================================================= */
+
+.customer-table .created-date {
+  font-size: 12px;
+
+  line-height: 20px;
+
+  color: #59677d;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   CREDIT / DUE
+========================================================= */
+
+.customer-table .credit-value {
+  display: block;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 20px;
+
+  color: #00a86b;
+
+  white-space: nowrap;
+}
+
+.customer-table .credit-value.due {
+  color: #e11d48;
+}
+
+.customer-table .credit-limit {
+  display: block;
+
+  margin-top: 1px;
+
+  color: #98a5b8;
+
+  font-size: 10px;
+
+  line-height: 18px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.customer-table .status-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  min-width: 78px;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  line-height: 16px;
+
+  white-space: nowrap;
+}
+
+.customer-table .status-badge.active {
+  color: #129568;
+
+  background: #effcf6;
+
+  border: 1px solid #a7efd3;
+}
+
+.customer-table .status-badge.hold {
+  color: #52647b;
+
+  background: #f4f7fa;
+
+  border: 1px solid #cbd5e1;
+}
+
+.customer-table .status-badge.inactive {
+  color: #e11d48;
+
+  background: #fff1f2;
+
+  border: 1px solid #fecdd3;
+}
+
+/* =========================================================
+   STATUS SELECT
+========================================================= */
+
+.customer-table .status-select {
+  margin-left: 3px;
+
+  padding: 3px 5px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  border-radius: 5px;
+
+  border: 1px solid #cbd5e1;
+
+  background: #ffffff;
+
+  color: #435168;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+/* =========================================================
+   ACTION BUTTON
+========================================================= */
+
+.customer-table .action-btn {
+  min-width: auto;
+
+  padding: 5px 7px;
+
+  border: 1px solid #dce2ea;
+
+  background: #ffffff;
+
+  border-radius: 6px;
+
+  color: #435168;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  line-height: 18px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 3px;
+}
+
+.customer-table .action-btn:hover {
+  background: #f5f7fa;
+
+  border-color: #bbc5d3;
+}
+
+.customer-table .action-btn.danger {
+  color: #e11d48;
+
+  border-color: #fecdd3;
+
+  min-width: auto;
+}
+
+.customer-table .action-btn.danger:hover {
+  background: #fff1f2;
+
+  border-color: #fda4af;
+}
+
+/* =========================================================
+   CUSTOMER HERO HEADER BANNER
+========================================================= */
+
+.customer-hero-banner {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff !important;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+.customer-hero-banner h1,
+.customer-hero-banner h2 {
+  color: #ffffff !important;
+}
+
+.customer-hero-banner p {
+  color: #94a3b8 !important;
+}
+
+/* =========================================================
+   REGISTER & EDIT MULTI-STEPPER WIZARD
+========================================================= */
+
+.register-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+  background: #ffffff;
+  padding: 0.85rem;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+
+.step-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.step-item:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.step-item.active {
+  background: #eff6ff;
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.step-item.completed {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.step-item.active .step-number {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.step-item.completed .step-number {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.step-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.step-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.step-desc {
+  font-size: 0.725rem;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+.step-item.active .step-title {
+  color: #1d4ed8;
+}
+
+.step-item.completed .step-title {
+  color: #047857;
+}
+
+/* =========================================================
+   CATEGORY PICKER & CREDIT PRESET PILLS
+========================================================= */
+
+.category-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.category-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.875rem 0.65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.category-card:hover {
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.category-card.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.category-icon-wrapper {
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-card.selected .category-icon-wrapper {
+  color: #2563eb;
+}
+
+.category-title {
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.2;
+}
+
+.category-card.selected .category-title {
+  color: #1d4ed8;
+}
+
+.preset-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.preset-pill {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.preset-pill:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.preset-pill.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+/* =========================================================
+   LIVE PROFILE PREVIEW SIDEBAR CARD
+========================================================= */
+
+.live-preview-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  position: sticky;
+  top: 80px;
+}
+
+.live-preview-header {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  margin-bottom: 1.25rem;
+}
+
+.preview-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0 auto 0.75rem auto;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.preview-company-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.preview-contact-name {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.preview-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.825rem;
+}
+
+.preview-detail-row:last-child {
+  border-bottom: none;
+}
+
+.preview-label {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.preview-value {
+  color: #0f172a;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* Responsive Stepper Breakdown */
+@media (max-width: 900px) {
+  .register-stepper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .step-item {
+    width: 100%;
+  }
+
+  .customer-hero-banner {
+    padding: 1.25rem;
+  }
+}

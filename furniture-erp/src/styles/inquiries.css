@@ -1,0 +1,266 @@
+/* Inquiries & Lead Management Styling - Premium Modern ERP Theme */
+
+.crm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.crm-title-group h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crm-subtitle {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.inquiry-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.inquiry-stat-card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 0.3rem 0.45rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.inquiry-stat-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.stat-info-title {
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.stat-info-val {
+  font-size: 0.775rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 0.05rem;
+}
+
+.stat-icon-badge {
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon-badge svg {
+  width: 11px;
+  height: 11px;
+}
+
+.stat-icon-blue { background: #eff6ff; color: #2563eb; }
+.stat-icon-emerald { background: #ecfdf5; color: #10b981; }
+.stat-icon-amber { background: #fffbe6; color: #d97706; }
+.stat-icon-purple { background: #f3e8ff; color: #9333ea; }
+.stat-icon-rose { background: #ffe4e6; color: #e11d48; }
+
+.filter-toolbar {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 280px;
+}
+
+.filter-select {
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  font-size: 0.875rem;
+  color: #334155;
+  font-weight: 5rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  border-color: #3b82f6;
+  background-color: #ffffff;
+}
+
+.badge-inquiry-status {
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-status-new { background-color: #e0f2fe; color: #0369a1; }
+.badge-status-contacted { background-color: #fef3c7; color: #b45309; }
+.badge-status-under-review { background-color: #f3e8ff; color: #7e22ce; }
+.badge-status-qualified { background-color: #dcfce7; color: #15803d; }
+.badge-status-converted { background-color: #ccfbf1; color: #0f766e; }
+.badge-status-lost { background-color: #fee2e2; color: #b91c1c; }
+
+.priority-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.priority-high { background-color: #ffe4e6; color: #e11d48; }
+.priority-medium { background-color: #fef9c3; color: #a16207; }
+.priority-low { background-color: #f1f5f9; color: #475569; }
+
+.btn-convert-lead {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.78125rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+}
+
+.btn-convert-lead:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+.btn-convert-customer {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
+}
+
+.btn-convert-customer:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* Modal styling */
+.modal-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .modal-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive Layout Improvements for Inquiries & Leads */
+@media (max-width: 1024px) {
+  .inquiry-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .crm-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .inquiry-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.45rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .inquiry-stat-card {
+    padding: 0.35rem 0.5rem !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  .stat-info-val {
+    font-size: 0.825rem !important;
+  }
+
+  .stat-icon-badge {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 4px !important;
+  }
+
+  .filter-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.75rem;
+  }
+
+  .search-filter-group {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .filter-toolbar select, .filter-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .inquiry-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.4rem !important;
+  }
+}
