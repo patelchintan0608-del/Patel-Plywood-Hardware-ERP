@@ -546,53 +546,170 @@
 /* ================= RESPONSIVE LAYOUT ================= */
 @media (max-width: 1024px) {
   .login-cinema-bg {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .login-bg-video,
+  .login-dark-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .login-main-stage {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    max-height: none;
+    max-width: 500px;
+    margin: 1.5rem auto;
+    padding: 0;
   }
 
+  /* Hide left marketing chips on tablets/mobiles so Admin Portal card is immediately centered */
   .left-features-column {
-    max-width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-
-  .feature-chip-item {
-    flex-direction: column;
-    text-align: center;
+    display: none;
   }
 
   .right-glass-login-card {
     width: 100%;
-    max-width: 450px;
+    max-width: 460px;
+    max-height: none;
+    margin: 0 auto;
+    padding: 2.25rem 2rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
   }
 }
 
 @media (max-width: 640px) {
-  .login-top-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .login-cinema-bg {
+    padding: 1rem 1rem 1.5rem 1rem;
   }
 
+  .login-top-bar {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Hide motto on mobile to keep top header clean and uncluttered */
   .top-motto-container {
-    text-align: left;
+    display: none;
+  }
+
+  .brand-logo-container {
+    gap: 0.85rem;
+    justify-content: center;
+  }
+
+  .brand-logo-stack-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .stack-layer {
+    width: 28px;
+    height: 10px;
+  }
+
+  .layer-1 {
+    top: 3px;
+    left: 6px;
+  }
+
+  .layer-2 {
+    top: 13px;
+    left: 4px;
+  }
+
+  .layer-3 {
+    top: 23px;
+    left: 2px;
   }
 
   .brand-name-main {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+
+  .brand-name-sub {
+    font-size: 0.65rem;
+  }
+
+  .brand-name-erp-line .erp-tag {
+    font-size: 0.62rem;
+  }
+
+  .login-main-stage {
+    margin: 0.75rem auto 1rem auto;
+    width: 100%;
   }
 
   .right-glass-login-card {
-    padding: 2rem 1.5rem;
+    padding: 1.75rem 1.25rem;
+    border-radius: 20px;
+    background: rgba(14, 17, 24, 0.92);
   }
 
-  .calligraphy-tagline {
-    font-size: 2.2rem;
+  .card-header-group {
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+
+  .login-portal-title {
+    font-size: 1.65rem;
+  }
+
+  .login-portal-sub {
+    font-size: 0.8rem;
+  }
+
+  .dark-login-form {
+    gap: 1rem;
+  }
+
+  .dark-input-wrapper {
+    border-radius: 12px;
+  }
+
+  .dark-input-element {
+    height: 48px;
+    font-size: 16px; /* Prevents auto-zoom on mobile browsers */
+  }
+
+  .dark-options-row {
+    margin-top: 0.1rem;
+  }
+
+  .dark-checkbox-label {
+    font-size: 0.8rem;
+  }
+
+  .gold-forgot-link {
+    font-size: 0.8rem;
+  }
+
+  .gold-login-btn {
+    height: 48px;
+    font-size: 1rem;
+    margin-top: 0.75rem;
+    border-radius: 12px;
+  }
+
+  .card-footer-branding {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
   }
 }
+

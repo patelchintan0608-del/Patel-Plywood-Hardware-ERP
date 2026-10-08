@@ -20,7 +20,53 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+// Configured allowed origins for CORS (Local development + Vercel / Production domains)
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:3000",
+  "http://localhost:4173",
+  "http://127.0.0.1:5173",
+  "http://127.0.0.1:3000",
+];
+
+// Add URLs from CLIENT_URL or FRONTEND_URL env vars (supports comma-separated list)
+const envUrls = [process.env.CLIENT_URL, process.env.FRONTEND_URL].filter(Boolean);
+envUrls.forEach((entry) => {
+  entry.split(",").forEach((url) => {
+    const trimmed = url.trim().replace(/\/+$/, "");
+    if (trimmed && !allowedOrigins.includes(trimmed)) {
+      allowedOrigins.push(trimmed);
+    }
+  });
+});
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    // Allow requests with no origin (e.g. mobile apps, curl, server-to-server, Render health checks)
+    if (!origin) return callback(null, true);
+
+    const originClean = origin.replace(/\/+$/, "");
+
+    // Match exact listed origins or any vercel.app deployment / preview branch
+    const isAllowed =
+      allowedOrigins.includes(originClean) ||
+      /\.vercel\.app$/.test(originClean) ||
+      process.env.NODE_ENV !== "production";
+
+    if (isAllowed) {
+      callback(null, true);
+    } else {
+      console.warn(`[CORS Blocked] Origin not allowed: ${origin}`);
+      callback(new Error(`CORS blocked: Origin ${origin} is not allowed`));
+    }
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept"],
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // API Routes

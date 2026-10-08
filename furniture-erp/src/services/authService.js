@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const API_URL = 'http://localhost:5000/api/auth';
+import { AUTH_API_URL as API_URL } from '../config/apiConfig';
 
 // Helper to get stored token
 export const getToken = () => {
